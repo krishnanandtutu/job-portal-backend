@@ -88,6 +88,8 @@ export const login = async (req, res) => {
         }
         const token = await jwt.sign(tokenData, process.env.SECRET_KEY, { expiresIn: '1d' });
 
+        console.log(token);
+
          user = {
             _id: user._id,
             fullname: user.fullname,
